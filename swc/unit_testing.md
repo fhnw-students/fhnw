@@ -70,4 +70,17 @@ try {	// code that should throw an exception fail();} catch (<Type of expected
 ###Conditions to check:* bogus or inconsistent input values* badly formatted data such as email addresses * empty or missing values* values far in excess* duplicates* ordered versus unordered data
 
 ###Boundary Conditions - CORRECT* **C**onformanceDoes the value conform to an expected result?* **O**rderIs the set of values ordered or unordered as appropriate?* **R**angeIs the value within reasonable minimum and maximum values?* **R**eferenceDoes the code reference anything external that isn't under direct control of the code itself?* **E**xistenceDoes the value exist (e.g. is non-null, non-zero, present in a set,...)* **C**ardinalityIs there the expected number of values?* **T**imeIs everything happening in order? At the right time? In time?
-
+***Only test this, if it is really relevant – go for correctness and robustness first***
+
+##TTD - Test First
+Write Test Code before productive code**Approach**
+* Define methods (names, parameters, return values, exceptions) * Write test code according to method requirements* Implement productive code until tests are green
+**Advantages*** You have tested software * You have a safety net* You have testable code
+**What is Testable Code?**
+* it is easy to add tests* it requires no big infrastructure * it can be tested in isolation##Terms* **Class under Test (CUT)**	* A class that has to be tested* **Method under Test (MUT)**	* A single method that has to be tested* **Test Case**	* specific data that is chosen for testing methods of a CUT* **Test Suite**	* a set of test cases that serves a particular testing goal* **Test Fixture**	* See following slides##Example
+```javapublic class SimpleTest {
+	private Collection<Object> collection;
+	@Before // assures that objects under test are always created the same way 	public void setUp() { collection = new ArrayList<Object>(); }
+	// all tests operate on objects with the same content.	@Test	public void testEmptyCollection() {		assertTrue(collection.isEmpty()); 	}
+	@Test	public void testOneItemCollection() {		collection.add("itemA");		assertEquals(1, collection.size()); 	}
+		@After // assures that all resources are freed after each test	public void tearDown() { 		collection = null; 	} }```
