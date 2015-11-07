@@ -23,12 +23,13 @@ Contains all information to generate output from source:
 * **test-compile** compile test code
 * **test** execute tests* **package** package the artifact* **integration-test** execute integration tests* **install** copy artifact into the local repository* **deploy** publish artifact in the remote repository
 ##Directory Structure
-project home |
+```project home |
  |- /src |	|- /main
  |	|	|- /java |	|	|- /resources |  | |	|- /test
  |		|- /java |		|- /resources |
  |- /target
  |- pom.xml
+```
  
 ##Plugin
 ```xml
