@@ -1,4 +1,4 @@
-# fhnw
+# FHNW - Summaries
 
 ##SWC
 

@@ -1,12 +1,11 @@
 #Build Automations
 
 ##CRISP Builds
-* **Complete**  - recipe lists all ingredients
-* **Repeatable**  - version control time machine
-* **Informative**  - radiate valuable information
-* **Schedulable**  - complete and repeatable
-* **Portable** 
-  - machine-independent
+* **Complete** - recipe lists all ingredients
+* **Repeatable** - version control time machine
+* **Informative** - radiate valuable information
+* **Schedulable** - complete and repeatable
+* **Portable** - machine-independent
   
 ##POM
 Contains all information to generate output from source:
@@ -15,7 +14,7 @@ Contains all information to generate output from source:
 <project>  <modelVersion>4.0.0</modelVersion>  <groupId>ch.fhnw.imvs</groupId>  <artifactId>myapp</artifactId>  <version>1.0-SNAPSHOT</version>  <packaging>jar</packaging>  <name>My First App</name>  <url>http://maven.apache.org</url></project>```
 **Mandatory**:* groupId:theorganizationidentifiersuchastheDNSname:ch.fhnw.imvs* artifactId: the name of the product: myapp* version: the release identifier: 3.1.2 (major.minor.incremental)* packaging:thetypeofpackaging(jar,ear,war...)
 **Optional**:
-* name: the project name* url:theproject’swebpage
+* name: the project name* url:theproject’swebpage
 ##The Standard Build Process
 * **validate** check if project is valid and all necessary information is
 * **process-resources** convert and filter resource files
@@ -33,4 +32,5 @@ Contains all information to generate output from source:
  
 ##Plugin
 ```xml
-   <build>     <plugins>       <plugin>         <artifactId>maven-compiler-plugin</artifactId>         <version>3.2</version>         <configuration>           <source>1.7</source>           <target>1.7</target>         </configuration>       </plugin>     </plugins></build>``` 
+   <build>     <plugins>       <plugin>         <artifactId>maven-compiler-plugin</artifactId>         <version>3.2</version>         <configuration>           <source>1.7</source>           <target>1.7</target>         </configuration>       </plugin>     </plugins></build>
+```
