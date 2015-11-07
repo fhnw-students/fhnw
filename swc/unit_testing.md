@@ -39,6 +39,8 @@ Unit Testing is done
 **assertEquals(<Type> expected, <Type> actual)**  
 
 * Compares primitive types by value* Compares class types by calling equals* Overloaded with all primitive types, Object and String.
+Rundung bei Double immer angeben```java
+@Testpublic void testSquareRootUsingInverse() {   double x = mySquareRoot(4.0);   assertEquals(4.0, x * x, 0.00001);}```
 **assertSame(Object expected, Object actual)** 
 * Compares references using ==-operator**assertNull(Object x), assertTrue(boolean b)**
 * Does what it says :-)
