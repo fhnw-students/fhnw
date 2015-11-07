@@ -70,9 +70,11 @@ try {	// code that should throw an exception fail();} catch (<Type of expected
 ###Conditions to check:* bogus or inconsistent input values* badly formatted data such as email addresses * empty or missing values* values far in excess* duplicates* ordered versus unordered data
 
 ###Boundary Conditions - CORRECT* **C**onformanceDoes the value conform to an expected result?* **O**rderIs the set of values ordered or unordered as appropriate?* **R**angeIs the value within reasonable minimum and maximum values?* **R**eferenceDoes the code reference anything external that isn't under direct control of the code itself?* **E**xistenceDoes the value exist (e.g. is non-null, non-zero, present in a set,...)* **C**ardinalityIs there the expected number of values?* **T**imeIs everything happening in order? At the right time? In time?
-***Only test this, if it is really relevant – go for correctness and robustness first***
 
-##TDD - Test First
+
+###Performance***Only test this, if it is really relevant – go for correctness and robustness first***
+
+##TDD(TEst-Driven-Development) - Test First
 Write Test Code before productive code**Approach**
 * Define methods (names, parameters, return values, exceptions) * Write test code according to method requirements* Implement productive code until tests are green
 **Advantages*** You have tested software * You have a safety net* You have testable code
